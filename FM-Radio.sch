@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.7.0">
+<eagle version="8.0.1">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -798,6 +798,39 @@ grid 5 mm, diameter 14 mm</description>
 <text x="3.81" y="-1.27" size="0.8128" layer="27" ratio="10">&gt;VALUE</text>
 <rectangle x1="0.254" y1="-1.27" x2="0.762" y2="1.27" layer="51"/>
 </package>
+<package name="CAPACITOR-1206">
+<wire x1="-2.473" y1="0.983" x2="2.473" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="2.473" y1="-0.983" x2="-2.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="-2.473" y1="-0.983" x2="-2.473" y2="0.983" width="0.0508" layer="39"/>
+<wire x1="2.473" y1="0.983" x2="2.473" y2="-0.983" width="0.0508" layer="39"/>
+<wire x1="-0.965" y1="0.787" x2="0.965" y2="0.787" width="0.1016" layer="51"/>
+<wire x1="-0.965" y1="-0.787" x2="0.965" y2="-0.787" width="0.1016" layer="51"/>
+<smd name="1" x="-1.4" y="0" dx="1.6" dy="1.8" layer="1"/>
+<smd name="2" x="1.4" y="0" dx="1.6" dy="1.8" layer="1"/>
+<text x="-1.27" y="1.143" size="0.8128" layer="25">&gt;NAME</text>
+<text x="-1.905" y="-1.905" size="0.8128" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.7018" y1="-0.8509" x2="-0.9517" y2="0.8491" layer="51"/>
+<rectangle x1="0.9517" y1="-0.8491" x2="1.7018" y2="0.8509" layer="51"/>
+</package>
+<package name="CAP-POL-3.5-8">
+<wire x1="-1.651" y1="1.27" x2="-1.397" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-1.397" y1="1.016" x2="-1.397" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-1.397" y1="1.27" x2="-1.143" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-1.397" y1="1.27" x2="-1.397" y2="1.524" width="0.1524" layer="21"/>
+<wire x1="-1.651" y1="0" x2="-0.762" y2="0" width="0.1524" layer="21"/>
+<wire x1="-0.762" y1="0" x2="-0.762" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-0.762" y1="-1.27" x2="-0.254" y2="-1.27" width="0.1524" layer="21"/>
+<wire x1="-0.254" y1="-1.27" x2="-0.254" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-0.254" y1="1.27" x2="-0.762" y2="1.27" width="0.1524" layer="21"/>
+<wire x1="-0.762" y1="1.27" x2="-0.762" y2="0" width="0.1524" layer="21"/>
+<wire x1="0.635" y1="0" x2="1.651" y2="0" width="0.1524" layer="21"/>
+<pad name="-" x="1.75" y="0" drill="0.9" shape="octagon"/>
+<pad name="+" x="-1.75" y="0" drill="0.9"/>
+<text x="3.683" y="2.54" size="0.8128" layer="25" ratio="10">&gt;NAME</text>
+<text x="3.683" y="-3.175" size="0.8128" layer="27" ratio="10">&gt;VALUE</text>
+<rectangle x1="0.254" y1="-1.27" x2="0.762" y2="1.27" layer="21"/>
+<circle x="0" y="0" radius="4.0005" width="0.127" layer="21"/>
+</package>
 </packages>
 <symbols>
 <symbol name="GND">
@@ -904,14 +937,14 @@ grid 5 mm, diameter 14 mm</description>
 <wire x1="10.16" y1="-5.08" x2="10.16" y2="-10.16" width="0.254" layer="94"/>
 <pin name="SDA" x="-15.24" y="12.7" length="middle"/>
 <pin name="SCL" x="-15.24" y="7.62" length="middle"/>
-<pin name="GND" x="-15.24" y="2.54" length="middle"/>
-<pin name="NC" x="-15.24" y="-2.54" length="middle"/>
+<pin name="BUSMODE" x="-15.24" y="2.54" length="middle"/>
+<pin name="W/R" x="-15.24" y="-2.54" length="middle"/>
 <pin name="VCC" x="-15.24" y="-7.62" length="middle"/>
 <text x="-2.54" y="-7.62" size="1.27" layer="94">32.768khz</text>
-<pin name="GND2" x="20.32" y="-7.62" length="middle" rot="R180"/>
+<pin name="GND" x="20.32" y="-7.62" length="middle" rot="R180"/>
 <pin name="L.OUT" x="20.32" y="-2.54" length="middle" rot="R180"/>
 <pin name="R.OUT" x="20.32" y="2.54" length="middle" rot="R180"/>
-<pin name="GND1" x="20.32" y="7.62" length="middle" rot="R180"/>
+<pin name="MPXO" x="20.32" y="7.62" length="middle" rot="R180"/>
 <pin name="ANT" x="20.32" y="12.7" length="middle" rot="R180"/>
 <text x="-2.54" y="-12.7" size="1.778" layer="96">&gt;VALUE</text>
 <text x="-2.54" y="15.748" size="1.778" layer="95">&gt;NAME</text>
@@ -1082,6 +1115,15 @@ grid 5 mm, diameter 14 mm</description>
 <technology name=""/>
 </technologies>
 </device>
+<device name="1206" package="CAPACITOR-1206">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 <deviceset name="ARDUINO-NANO">
@@ -1143,15 +1185,15 @@ grid 5 mm, diameter 14 mm</description>
 <device name="" package="TJ-102BC">
 <connects>
 <connect gate="G$1" pin="ANT" pad="10"/>
-<connect gate="G$1" pin="GND" pad="3"/>
-<connect gate="G$1" pin="GND1" pad="9"/>
-<connect gate="G$1" pin="GND2" pad="6"/>
+<connect gate="G$1" pin="BUSMODE" pad="3"/>
+<connect gate="G$1" pin="GND" pad="6"/>
 <connect gate="G$1" pin="L.OUT" pad="7"/>
-<connect gate="G$1" pin="NC" pad="4"/>
+<connect gate="G$1" pin="MPXO" pad="9"/>
 <connect gate="G$1" pin="R.OUT" pad="8"/>
 <connect gate="G$1" pin="SCL" pad="2"/>
 <connect gate="G$1" pin="SDA" pad="1"/>
 <connect gate="G$1" pin="VCC" pad="5"/>
+<connect gate="G$1" pin="W/R" pad="4"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1256,6 +1298,15 @@ grid 5 mm, diameter 14 mm</description>
 <technology name=""/>
 </technologies>
 </device>
+<device name="" package="CAP-POL-3.5-8">
+<connects>
+<connect gate="G$1" pin="+" pad="+"/>
+<connect gate="G$1" pin="-" pad="-"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
 </devices>
 </deviceset>
 </devicesets>
@@ -1298,13 +1349,12 @@ grid 5 mm, diameter 14 mm</description>
 <part name="P+5" library="SaintGimp" deviceset="VCC" device=""/>
 <part name="GND10" library="SaintGimp" deviceset="GND" device=""/>
 <part name="GND11" library="SaintGimp" deviceset="GND" device=""/>
-<part name="R7" library="SaintGimp" deviceset="RESISTOR-*" device="7.5MM" value="10K"/>
-<part name="R8" library="SaintGimp" deviceset="RESISTOR-*" device="7.5MM" value="10K"/>
+<part name="R7" library="SaintGimp" deviceset="RESISTOR-*" device="7.5MM" value="4K7"/>
+<part name="R8" library="SaintGimp" deviceset="RESISTOR-*" device="7.5MM" value="4K7"/>
 <part name="IC3" library="SaintGimp" deviceset="TEA5767" device=""/>
 <part name="P+6" library="SaintGimp" deviceset="VCC" device=""/>
 <part name="GND12" library="SaintGimp" deviceset="GND" device=""/>
 <part name="GND13" library="SaintGimp" deviceset="GND" device=""/>
-<part name="GND14" library="SaintGimp" deviceset="GND" device=""/>
 <part name="IC4" library="SaintGimp" deviceset="PT2257" device=""/>
 <part name="GND15" library="SaintGimp" deviceset="GND" device=""/>
 <part name="P+7" library="SaintGimp" deviceset="VCC" device=""/>
@@ -1559,7 +1609,6 @@ grid 5 mm, diameter 14 mm</description>
 <instance part="P+6" gate="VCC" x="-17.78" y="38.1" rot="R90"/>
 <instance part="GND12" gate="1" x="-17.78" y="48.26" rot="R270"/>
 <instance part="GND13" gate="1" x="27.94" y="38.1" rot="R90"/>
-<instance part="GND14" gate="1" x="27.94" y="53.34" rot="R90"/>
 <instance part="IC4" gate="G$1" x="5.08" y="17.78"/>
 <instance part="GND15" gate="1" x="-20.32" y="10.16"/>
 <instance part="P+7" gate="VCC" x="-20.32" y="25.4"/>
@@ -1612,19 +1661,14 @@ grid 5 mm, diameter 14 mm</description>
 </net>
 <net name="GND" class="0">
 <segment>
-<pinref part="IC3" gate="G$1" pin="GND"/>
+<pinref part="IC3" gate="G$1" pin="BUSMODE"/>
 <pinref part="GND12" gate="1" pin="GND"/>
 <wire x1="-12.7" y1="48.26" x2="-15.24" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="IC3" gate="G$1" pin="GND2"/>
+<pinref part="IC3" gate="G$1" pin="GND"/>
 <pinref part="GND13" gate="1" pin="GND"/>
 <wire x1="22.86" y1="38.1" x2="25.4" y2="38.1" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND14" gate="1" pin="GND"/>
-<pinref part="IC3" gate="G$1" pin="GND1"/>
-<wire x1="25.4" y1="53.34" x2="22.86" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="IC4" gate="G$1" pin="GND"/>
